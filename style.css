@@ -1,0 +1,415 @@
+/* Hide header on scroll */
+header {
+    transition: top 0.3s;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background: rgba(26, 26, 26, 0.9); /* Slight transparency for modern effect */
+    color: #ffffff;
+    padding: 15px 0; /* Slightly reduced padding for a compact look */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Stronger shadow for depth */
+    backdrop-filter: blur(5px); /* Subtle blur for a glass effect */
+}
+
+.hidden-header {
+    top: -100px; /* Adjust based on header height */
+}
+
+/* Ensure sections are not hidden behind the header */
+.section {
+    scroll-margin-top: 80px; /* Adjust based on header height */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Updated background color */
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Georgia', serif;
+    color: #f39c12; /* Updated heading color */
+    line-height: 1.6;
+    margin-bottom: 10px; /* Reduced margin for better spacing */
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #f39c12;
+    animation: fadeIn 1s ease-in-out;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Even spacing */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    margin-left: 20px; /* Add some space from the menu icon */
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.nav-links a:hover {
+    background: #f39c12; /* Highlight effect */
+    color: #000;
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    left: 20px; /* Position the menu icon to the left */
+}
+
+.menu-icon i {
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 100px 20px 20px;
+}
+
+.section {
+    padding: 20px;
+    background: #1a1a1a;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    animation: slideIn 1s ease-in-out;
+}
+
+.section h2, .section h3 {
+    margin-top: 10px; /* Adjusted margin for section headings */
+    margin-bottom: 5px; /* Reduced margin for closer spacing */
+}
+
+.section ul {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.section li {
+    margin-bottom: 10px;
+}
+
+.section p {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+    padding: 5px 0;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+}
+
+.section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.section form label {
+    display: block; /* Ensure labels are on a new line */
+    margin-bottom: 8px; /* Adds space below each label */
+    font-weight: bold;
+}
+
+.section form div {
+    margin-bottom: 15px; /* Adds space between each input field */
+}
+
+.section form input,
+.section form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+}
+
+.section form button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #f29a0c;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: auto; /* Ensure button width is auto */
+}
+
+.section form button:hover {
+    background-color: #f29a0c;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #1a1a1a;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid #ffffff;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ffffff;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f39c12;
+    color: black;
+}
+
+td {
+    background-color: #1a1a1a;
+}
+
+/* Social Media Section */
+.social-container {
+    text-align: center;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    width: 400px;
+    margin: auto; /* Center the container */
+}
+
+/* Heading */
+.social-container h2 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.social-links a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: #222;
+    color: white;
+    font-size: 32px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover Effects */
+.social-links a:hover {
+    transform: scale(1.15);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Icon Colors */
+.social-links a.github:hover {
+    background: #333;
+}
+
+.social-links a.leetcode:hover {
+    background: #FFA116;
+}
+
+.social-links a.linkedin:hover {
+    background: #0077b5;
+}
+
+/* Text Below Icons */
+.social-links a span {
+    font-size: 14px;
+    margin-top: 8px;
+    color: white;
+}
+#projects p {
+    text-align: justify;
+}
+/* Desktop view */
+@media (min-width: 769px) {
+    header {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header h1 {
+        margin-bottom: 0; /* Remove bottom margin */
+         /* Align heading to the left */
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        width: auto;
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: center;
+        width: auto;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        justify-content: space-between;
+    }
+    .hidden-header {
+        display: none;
+    }
+    header h1 {
+        font-size: 1.5rem;
+        text-align: center;
+        flex: 1;
+    }
+    nav a {
+        width: auto; /* Make buttons full width on mobile */
+        margin: 0 auto;
+        display: block; /* Ensure they stack vertically */
+    }
+
+
+
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        left: 20px; /* Position the menu icon to the left */
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        left: 0; /* Align to the left */
+        background: rgba(26, 26, 26, 0.9);
+        width: auto;
+        text-align: left; /* Align links to the left */
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+        padding: 10px;
+        padding-left: 20px; /* Add space from the left edge */
+    }
+
+    .container {
+        width: 90%;
+        padding: 80px 10px 10px;
+    }
+
+    .section {
+        padding: 15px;
+        margin: 15px 0;
+    }
+
+    .social-container {
+        width: 90%;
+    }
+
+    .social-links {
+        flex-direction: row; /* Display links horizontally */
+        gap: 20px;
+    }
+
+    .social-links a {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+
+    .section form input,
+    .section form textarea {
+        width: 100%;
+        box-sizing: border-box; /* Ensure padding and border are included in the element's total width */
+    }
+
+    #about p,
+    #projects p {
+        text-align: justify;
+    }
+}
