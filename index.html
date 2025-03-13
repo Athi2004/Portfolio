@@ -7,6 +7,8 @@
     <title>Athish A S - Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
 </head>
 <body>
     <header>
@@ -108,8 +110,8 @@
         <section id="paper-presentation" class="section" style="background-color: #1a1a1a;">
             <h2>Paper Presentation</h2>
             <ul>
-                <li>Disease Prediction Model Using Machine Learning Algorithm (Presented a paper at VASHISHT-2023 in IIITDM, Kancheepuram | Feb-2023)</li>
-                <li>AI-Driven Optimization for Sustainable Soil Remediation (International Conference On Sustainable Resilient Remediation CES, Anna University | Feb 2023)</li>
+                <li><p>Disease Prediction Model Using Machine Learning Algorithm (Presented a paper at VASHISHT-2023 in IIITDM, Kancheepuram | Feb-2023)</p></li>
+                <li><p>AI-Driven Optimization for Sustainable Soil Remediation (International Conference On Sustainable Resilient Remediation CES, Anna University | Feb 2023)</p></li>
             </ul>
         </section>
         <section id="socials" class="section">
@@ -215,12 +217,22 @@ document.querySelector('form').addEventListener('submit', function(e) {
         alert('Please fill out all fields before submitting.');
     }
 });
-    document.addEventListener("contextmenu", event => event.preventDefault());
-document.onkeydown = function(e) {
-    if (e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === "I")) {
-        return false;
-    }
-};
 
+// Disable right-click
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
+
+// Disable certain keyboard shortcuts
+document.addEventListener('keydown', function(e) {
+    if (e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'a' || e.key === 'c' || e.key === 'x' || e.key === 'i' || e.key === 'j')) {
+        e.preventDefault();
+    }
+    if (e.key === 'F12') {
+        e.preventDefault();
+    }
+});
+    
     </script>
 </body>
+</html>
