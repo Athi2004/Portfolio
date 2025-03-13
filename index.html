@@ -215,6 +215,12 @@ document.querySelector('form').addEventListener('submit', function(e) {
         alert('Please fill out all fields before submitting.');
     }
 });
-    
+    document.addEventListener("contextmenu", event => event.preventDefault());
+document.onkeydown = function(e) {
+    if (e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === "I")) {
+        return false;
+    }
+};
+
     </script>
 </body>
