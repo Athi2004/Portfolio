@@ -300,6 +300,11 @@ td {
 #projects p {
     text-align: justify;
 }
+
+#paper-presentation p {
+    text-align: justify;
+}
+
 /* Desktop view */
 @media (min-width: 769px) {
     header {
